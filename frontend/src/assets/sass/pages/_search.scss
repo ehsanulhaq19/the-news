@@ -1,0 +1,91 @@
+.search-page {
+    padding: 10px;
+    .search-form-container {
+        @media only screen and (min-width: 896px) {
+            &{
+                margin: 20px;
+            }
+            .search-field {
+                display: flex;
+                width: 50%;
+                margin: auto;
+                margin-bottom: 10px;
+
+                label {
+                    margin-top: 5px;
+                }
+
+                input {
+                    margin-left: 10px;
+                }
+            }
+
+            .search-option-container {
+                display: flex;
+                .row {
+                    width: 100%;
+                    margin-right: 10px;
+                }
+            }
+
+            .submit-button {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .articles-section {
+        border-top: 2px solid $black;
+        margin-top: 20px;
+        padding-top: 20px;
+        min-height: 300px;
+
+        .story {
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid $black;
+            .story-img {
+                img {
+                    width: 300px;
+                }
+            }
+
+            h3 {
+                margin-top: 5px;
+                color: $black;
+                font-size: 16px;
+            }
+
+            .source {
+                margin-bottom: 0;
+                color: $black;
+                font-size: 12px;
+            }
+
+            .exact-time {
+                color: $black;
+                font-size: 12px;
+            }
+        }
+
+        .not-found-container {
+            min-height: 300px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .loader-container {
+            min-height: 300px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .loader {
+                margin: auto;
+            }
+        }
+    }
+}

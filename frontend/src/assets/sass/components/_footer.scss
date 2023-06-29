@@ -1,0 +1,125 @@
+.default-footer {
+
+    & * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    /*
+   * Footer Links
+   */
+
+    .footer-links {
+        padding: 20px;
+        background: $news-feed-raisin-black;
+    }
+
+    .footer-links a {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        color: $news-feed-anti-flash-white;
+        width: fit-content;
+        margin: auto;
+    }
+
+    .info-links {
+        padding-top: 20px;
+        padding-bottom: 25px;
+    }
+
+    /*
+    * Main Footer Links
+    */
+
+    .main-footer-links {
+        padding-top: 20px;
+    }
+
+    /*
+    * Our Address
+    */
+
+    .our-address {
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 20px;
+        color: $news-feed-anti-flash-white;
+        border-top: 1px solid $news-feed-anti-flash-white;
+    }
+
+    .our-address li {
+        padding: 5px;
+    }
+
+    .our-address li:first-child {
+        text-decoration: underline;
+        padding: 20px;
+    }
+
+    /*
+    * Footer Credit
+    */
+
+    footer {
+        position: relative;
+        background: $news-feed-smoky-black;
+        padding: 5px;
+    }
+
+    footer p {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        background: $news-feed-smoky-black;
+        color: $news-feed-anti-flash-white;
+    }
+
+    footer a.scroll-top:before {
+        font-family: "Fontawesome";
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        content: "\f151";
+        color: $news-feed-anti-flash-white;
+        font-size: 2.6rem;
+    }
+
+        /*
+     * Footer - Wide screen(min-width: 56em)
+     */
+
+     footer,
+     .footer-links {
+         margin-left: 10px;
+         margin-right: 10px;
+     }
+
+     .footer-links {
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         padding-top: 60px;
+         padding-bottom: 60px;
+     }
+
+     .info-links {
+         padding-top: 0;
+         grid-column: 1/2;
+         grid-row: 1/3;
+     }
+
+     .main-footer-links {
+         padding-top: 0;
+         grid-column: 2/3;
+         grid-row: 1/3;
+     }
+
+     .our-address {
+         grid-column: 3/4;
+         grid-row: 1/2;
+         height: 100px;
+         padding: 0;
+         margin: -12px;
+         border: none;
+     }
+}

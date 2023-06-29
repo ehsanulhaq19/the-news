@@ -1,0 +1,22 @@
+// Fonts
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// // Bootstrap
+// @import '~bootstrap/scss/bootstrap';
+
+// Components
+@import './components';
+
+// Layouts
+@import './layouts';
+
+// Pages
+@import './pages';
+
+body > #app {
+    max-width: 1920px;
+    margin: auto;
+}

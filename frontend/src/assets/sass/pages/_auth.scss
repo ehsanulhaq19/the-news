@@ -1,0 +1,327 @@
+.auth-screen {
+    & * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    &.screen {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100vh;
+    }
+    
+    .content-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $auth-background;
+      width: 50%;
+      height: 100vh;
+    }
+    
+    .logo {
+      display: flex;
+      align-self: baseline;
+      position: absolute;
+      left: 10px;
+      margin: 15px;
+    }
+    
+    .login-body {
+      background-color: $auth-form-background;
+      width: 75%;
+      max-width: 580px;
+    }
+    
+    .login-index {
+      display: flex;
+      flex-direction: column;
+      margin: 60px 100px 20px 100px;
+    }
+    
+    .login-box {
+      display: flex;
+    }
+    
+    .login-img {
+      margin-right: 10px;
+    }
+    
+    .login-title {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      color: $auth-text-title;
+      font-size: 22px;
+    }
+    
+    .login-desc {
+      color: $auth-text-base;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+    }
+    
+    .text,
+    .email,
+    .password {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .box-text,
+    .box-email,
+    .box-password {
+      display: flex;
+      flex-direction: column;
+      margin: 0px 100px 0px 100px;
+    }
+
+    .row-field {
+      margin: 0px 100px 0px 100px;
+      .box-text{
+        margin-left: 10px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+      }
+
+      .col-field:first-child {
+        .box-text{
+          margin-left: 0px;
+        }
+      }
+    }
+    
+    .text-text,
+    .text-email,
+    .text-password {
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      color: $auth-text-base;
+      margin-bottom: 10px;
+    }
+    
+    .text-block,
+    .email-block,
+    .password-block {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    
+    .input-field {
+      background-color: $auth-form-background;
+      background-repeat: no-repeat;
+      background-position: 5px;
+      border: 1px solid $auth-text-base;
+      border-radius: 5px;
+      padding: 10px;
+      color: $auth-text-base;
+      padding-left: 30px;
+      width: 100%;
+
+
+      &.input-text {
+        background-image: url('/assets/images/auth/mail.svg');
+      }
+
+      &.input-email {
+        background-image: url('/assets/images/auth/mail.svg');
+      }
+      
+      &.input-password {
+        background-image: url('/assets/images/auth/lock.svg');
+      }
+      
+      &.input-text:focus {
+        background-image: url('/assets/images/auth/mail-focus.svg');
+      }
+
+      &.input-email:focus {
+        background-image: url('/assets/images/auth/mail-focus.svg');
+      }
+      
+      &.input-password:focus {
+        background-image: url('/assets/images/auth/lock-focus.svg');
+      }
+    }
+    
+    .input-text::placeholder,
+    .input-email::placeholder,
+    .input-password::placeholder {
+      color: $auth-text-base;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+    }
+    
+    .input-text:focus-within,
+    .input-email:focus-within,
+    .input-password:focus-within {
+      box-shadow: 0px 0px 2px 1px $auth-primary-color;
+      border: 1px solid $auth-primary-color;
+      outline: 0;
+    }
+    
+    .input-error {
+      &.input-text,
+      &.input-email,
+      &.input-password {
+        border: 1px solid $red;
+      }
+
+      &.input-text::placeholder,
+      &.input-email::placeholder,
+      &.input-password::placeholder {
+        color: $red;
+      }
+    }
+
+    .error-message {
+      color: $red;
+      width: 100%;
+      height: 20px;
+    }
+
+    .remember {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0px 100px 20px 100px;
+    }
+    
+    .box-check {
+      border: solid 1px $auth-text-base;
+      width: 20px;
+      height: 20px;
+      border-radius: 3px;
+      background-color: #24221f;
+    }
+    
+    .box-remember {
+      display: none;
+    }
+    .box-remember:checked + div {
+      border: solid 2px transparent;
+      background-color: #ffc632;
+      background-image: url("/assets/images/auth/check.svg");
+      background-position: center center;
+    }
+    
+    .title-remember {
+      display: flex;
+    }
+    
+    .text-remember {
+      color: $auth-text-base;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      margin-left: 8px;
+    }
+    
+    .forgot {
+      color: $auth-primary-color;
+      font-family: "Poppins", sans-serif;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    
+    .content-left {
+      width: 50%;
+      height: 100vh;
+      background-image: url("/assets/images/wallpaper/news-paper-wallpaper1.jpeg");
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .footer {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .button {
+      margin: 0px 100px 20px 100px;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: $auth-primary-color;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    
+    .register {
+      margin: 0px 100px 20px 100px;
+      text-align: center;
+      color: $auth-primary-color;
+      font-family: "Poppins", sans-serif;
+      font-size: 14px;
+      cursor: pointer;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        margin-left: 5px;
+      }
+    }
+
+    //responsiveness
+    @media (min-width: 1000px) and (max-width: 1500px){
+      .login-body {
+        min-width: 500px;
+      }
+    }
+    @media (max-width: 1000px){
+        body{
+            overflow-x: hidden;
+        }
+        .content-left{
+            display: none;
+        }
+    
+        .content-right{
+            height: 100vh;
+            width: 100%;
+        }
+        .remember{
+            margin: 0px;
+            flex-wrap: wrap;
+            padding:10px;
+        }
+    
+        .login-body{
+            max-width: 100%;
+            width: 400px;
+            padding:20px;
+        }
+        .box-email , .box-password , .login-index, .button, .register{
+            margin: 0px;
+        }
+        .button{
+            max-width: 100%;
+            width: 300px;
+            margin: auto;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1000px){
+      .row-field {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+
+    @media (max-width: 767px){
+      .row-field {
+        width: 100%;
+        margin: auto !important;
+
+        .box-text{
+          margin: 10px 0px;
+        }
+      }
+
+    }
+}

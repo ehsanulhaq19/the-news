@@ -1,0 +1,48 @@
+.setting-page {
+    padding: 10px;
+    
+    .wrapper{
+        padding: 30px 50px;
+        border-radius: 15px;
+        margin: 10px auto;
+        max-width: 600px;
+        margin-bottom: 20px;
+    }
+    h4{
+        letter-spacing: -1px;
+        font-weight: 400;
+    }
+
+    label{
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 500;
+        color: #777;
+        padding-left: 3px;
+    }
+
+    .form-control{
+        border-radius: 10px;
+    }
+
+    .button{
+        background-color: $white;
+        color: $primary-blue;
+    }
+    .button:hover{
+        background-color: $primary-blue;
+        color: $white;
+    }
+    .btn-primary{
+        background-color: $primary-blue;
+    }
+
+    @media(max-width:576px){
+        .wrapper{
+            padding: 25px 20px;
+        }
+        #deactivate{
+            line-height: 18px;
+        }
+    }
+}

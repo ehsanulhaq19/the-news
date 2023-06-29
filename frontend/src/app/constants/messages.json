@@ -1,0 +1,30 @@
+{
+    "errors": {
+        "required": {
+            "email": "Email is required",
+            "firstName": "First name is required",
+            "lastName": "Last name is required",
+            "password": "Password is required"
+        },
+        "validations": {
+            "minimumPasswordLength": "Password should be at least {value} characters long",
+            "confirmPasswordNotMatch": "Password and confirm password do not match",
+            "invalidEmail": "Email address is not valid"
+        },
+        "signUp": {
+            "fail": "User is not registered successfully"
+        },
+        "login": {
+            "fail": "Invalid user credentials are provided"
+        }
+    },
+    "messages": {
+        "signUp": {
+            "success": "User {value} is registered successfully"
+        },
+        "userPrefrence": {
+            "createSuccess": "UserPrefrence is successfully added",
+            "createError": "Something went wrong"
+        }
+    }
+}

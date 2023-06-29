@@ -1,0 +1,120 @@
+.main-article {
+    padding: 0 10px;
+
+    .headline {
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        position: relative;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;    
+    }
+
+    @media only screen and (min-width: 37em) {
+        .headline {
+            min-height: 400px;
+        }
+    }
+
+    /* -------------------------------------------------------------
+        Article
+    ------------------------------------------------------------- */
+
+    .article h2 {
+        text-transform: capitalize;
+        padding-left: 10px;
+        margin-bottom: 0;
+    }
+
+    .article p {
+        padding-left: 10px;
+        margin-top: 0;
+    }
+
+    article p {
+        text-align: justify;
+        padding: 10px;
+    }
+
+    p.intro-text {
+        font-style: italic;
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+
+    figure {
+        padding: 0 10px;
+        img {
+            margin-bottom: 10px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            max-height: 350px;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        figure {
+            img {
+                width: 75vw;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 56em) {
+        /*
+        * Main - Wide screen(min-width: 56em)
+        */
+
+        .main-article {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            padding: 10px;
+            grid-gap: 20px;
+        }
+
+        .main-article .article {
+            font-size: 1.2rem;
+        }
+
+        /*
+        * Article - Wide screen(min-width: 56em)
+        */
+
+        .article h2 {
+            font-size: 2rem;
+            padding-top: 40px;
+            padding-bottom: 10px;
+            padding-left: 0;
+        }
+
+        .article p:first-of-type {
+            padding-bottom: 20px;
+            padding-left: 0;
+        }
+
+        .article p.intro-text {
+            font-size: 1.5rem;
+            padding-top: 50px;
+        }
+
+        .article h3 {
+            padding-left: 0;
+        }
+    }
+
+    .artilce-not-found {
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+}
