@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Config;
 
 class Article extends Model
 {
@@ -76,6 +77,7 @@ class Article extends Model
      */
     public function getHeadlinePlaceholderImageAttribute()
     {
-        return "/images/placeholders/news_title.png";
+        $domain = config('app.url');
+        return $domain . "/images/placeholders/news_title.png";
     }
 }
