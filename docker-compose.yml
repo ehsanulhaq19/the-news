@@ -4,7 +4,7 @@ services:
     container_name: news_app
     build:
       context: .
-      dockerfile: ./docker/php/Dockerfile
+      dockerfile: ./docker/backend/Dockerfile
     expose:
       - 9000
     volumes:
@@ -41,8 +41,10 @@ services:
 
   news_db:
     container_name: news_db
-    image: mysql:8.0.20
     restart: always
+    build:
+      context: .
+      dockerfile: ./docker/db/Dockerfile
     volumes:
       - ./backend/storage/db-data:/var/lib/mysql
     ports:

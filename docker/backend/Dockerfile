@@ -40,7 +40,7 @@ RUN apt-get update \
     && docker-php-ext-enable redis \
     && rm -rf /var/lib/apt/lists/*;
 
-COPY ./docker/php/laravel.ini /usr/local/etc/php/conf.d/laravel.ini
+COPY ./docker/backend/laravel.ini /usr/local/etc/php/conf.d/laravel.ini
 
 WORKDIR /usr/src/app
 
@@ -53,17 +53,12 @@ RUN composer install
 # Set permissions for Laravel storage and bootstrap cache folders
 RUN chown -R www-data:www-data storage bootstrap/cache
 
-COPY ./docker/php/entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY ./docker/backend/entrypoint.sh /usr/local/bin/entrypoint.sh
 
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 EXPOSE 8000
 
-# ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["entrypoint.sh"]
 
-# ENTRYPOINT ["tail", "-f", "/dev/null"]
-
-# CMD php artisan migrate --force
-
-# Start Supervisor
-# CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+CMD php-fpm

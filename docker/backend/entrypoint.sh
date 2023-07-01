@@ -17,3 +17,7 @@ if ! mysql -h $DB_HOST -u $DB_USER -p$DB_PASSWORD -e "use $DB_NAME"; then
     mysql -h $DB_HOST -u $DB_USER -p$DB_PASSWORD -e "CREATE DATABASE $DB_NAME CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
     echo "Database is created"
 fi
+
+php artisan migrate --force
+
+exec "$@"
