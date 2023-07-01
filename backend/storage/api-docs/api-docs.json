@@ -405,6 +405,16 @@
                             "type": "string"
                         },
                         "example": "1,2"
+                    },
+                    {
+                        "name": "published_date",
+                        "in": "query",
+                        "description": "Published date filter",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "2023-04-19"
                     }
                 ],
                 "requestBody": {},

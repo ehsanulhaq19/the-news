@@ -1,0 +1,82 @@
+version: "3"
+services:
+  news_app:
+    container_name: news_app
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    expose:
+      - 9000
+    volumes:
+      - ./backend:/usr/src/app
+      - ./backend/public:/usr/src/app/public
+    depends_on:
+      - news_db
+    networks:
+      - app_network
+    environment:
+      DB_HOST: news_db
+      DB_PORT: 3306
+      DB_NAME: news_aggregator
+      DB_USER: root
+      DB_PASSWORD: root
+
+  news_nginx:
+    container_name: news_nginx
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    volumes:
+    - ./backend/public:/usr/src/app/public
+    ports:
+      - 8000:80
+    depends_on:
+      - news_app
+    environment:
+      NGINX_FPM_HOST: news_app
+      NGINX_ROOT: /usr/src/app/public
+      APP_PORT: 8000
+    networks:
+      - app_network
+
+  news_db:
+    container_name: news_db
+    image: mysql:8.0.20
+    restart: always
+    volumes:
+      - ./backend/storage/db-data:/var/lib/mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: news_aggregator
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+    networks:
+      - app_network
+
+  news_redis:
+    container_name: news_redis
+    image: redis:latest
+    ports:
+      - 6379:6379
+    networks:
+      - app_network
+
+  news_frontend:
+    build:
+      context: .
+      dockerfile: ./docker/frontend/Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - app_network
+    volumes:
+      - ./frontend:/usr/src/app
+    depends_on:
+      - news_db
+    tty: true
+
+networks:
+  app_network:
+    driver: bridge
