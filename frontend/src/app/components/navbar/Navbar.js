@@ -62,7 +62,7 @@ const Navbar = () => {
                 <nav className="nav-menu" role="navigation">
                     <ul className="nav-links" ref={navLinkRef}>
                         <div className='nav-link-section'>
-                            <li><Link to="/news-feed" onClick={navbarOptionClickHandler}>Home</Link></li>
+                            {/* <li><Link to="/news-feed" onClick={navbarOptionClickHandler}>Home</Link></li>
                             {
                                 articleCategories?.length && articleCategories.map((articleCategory, index) => {
                                     const {name} = articleCategory
@@ -71,7 +71,7 @@ const Navbar = () => {
                                         <li key={index}><a href={url} title={name} onClick={navbarOptionClickHandler}>{name}</a></li>
                                     )
                                 })
-                            }
+                            } */}
                         </div>
                         <div className='nav-link-section'>
                             <li className='custom-navbar-button setting-button'>

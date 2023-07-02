@@ -20,4 +20,7 @@ fi
 
 php artisan migrate --force
 
+#fetch articles data
+php artisan fetch:articles
+
 exec "$@"

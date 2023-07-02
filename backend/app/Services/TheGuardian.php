@@ -50,7 +50,7 @@ class TheGuardian
                 $articleFields = $responseArticle["fields"];
                 $articles[] = [
                     "title" => $articleFields["headline"],
-                    "author" => $articleFields["byline"] ? $articleFields["byline"] : "Unknown",
+                    "author" => isset($articleFields["byline"]) && $articleFields["byline"] ? $articleFields["byline"] : "Unknown",
                     "trail_text"=> $articleFields["trailText"],
                     "description" => $articleFields["bodyText"],
                     "url" => $articleFields["shortUrl"],

@@ -24,6 +24,7 @@ RUN apt-get update \
         zip \
         netcat \
         default-mysql-client \
+        cron \
     && apt-get clean \
     && pecl install redis \
     && docker-php-ext-configure gd \
@@ -61,4 +62,14 @@ EXPOSE 8000
 
 ENTRYPOINT ["entrypoint.sh"]
 
-CMD php-fpm
+# Copy the Laravel scheduler cron file
+COPY ./docker/backend/crontab /etc/cron.d/laravel-cron
+
+# Set permissions for the cron file
+RUN chmod 0644 /etc/cron.d/laravel-cron
+
+# Enable the cron job
+RUN crontab /etc/cron.d/laravel-cron
+
+# Run PHP-FPM and start cron service in the foreground
+CMD ["sh", "-c", "service cron start && php-fpm"]
