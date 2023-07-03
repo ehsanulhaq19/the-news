@@ -135,7 +135,7 @@ To get the swagger documentation of all the backend apis, Use this url
 - TheGuardian/
 - NewYorkTimes/
 
-## Project cron command not
+## Project cron command note
 <details>
   <summary><strong>Note</strong></summary>
   
