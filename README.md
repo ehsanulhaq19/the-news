@@ -89,13 +89,13 @@ Make sure you have the following tools installed on your system:
 
 2. Navigate to the project root directory:
 
-3. Run command docker-compose build
+3. Run command "docker-compose build"
 
 This command will download the necessary Docker images and build the containers defined in the `docker-compose.yml` file.
 
 ## Running the Project
 
-To run the project using Docker Compose, use the following command: docker-compose up
+To run the project using Docker Compose, use the following command: "docker-compose up"
 
 This command will start the containers and run the Laravel and React application. You can access the application in your web browser by visiting:
 
@@ -126,5 +126,18 @@ To get the swagger documentation of all the backend apis, Use this url
   Here is an image showcasing a swagger ui of project:
 
   ![Project Image](https://drive.google.com/file/d/18G2Dh2aDNTDDN4rgpQpXdFM3cn7H-xuj/view?usp=sharing)
+
+</details>
+
+## Article sources used
+- **NewsOrg/**
+- **TheGuardian/**
+- **NewYorkTimes/**
+
+## Project cron command not
+<details>
+  <summary><strong>Note</strong></summary>
+  
+  On setting up project and running with "docker-compose up", backend cron command will fetch all the news articles from the sources. After that cron command will run every day at 13:00.
 
 </details>
