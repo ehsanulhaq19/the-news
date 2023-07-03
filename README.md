@@ -1,5 +1,4 @@
-# Project Name
-The News
+# The News
 ## Project Structure
 
 The News project follows a standard structure recommended by the Laravel framework for backend application and React structure for frontend application. Below is an overview of the main directories and files:
