@@ -3,7 +3,7 @@
 
 The News project follows a standard structure recommended by the Laravel framework for backend application and React structure for frontend application. Below is an overview of the main directories and files:
 
-## Project Structure
+## Structure
 - **backend/**: Backend laravel project.
 - **frontend/**: Backend react project.
 - **docker/**: Project docker files.
@@ -20,7 +20,7 @@ The News project follows a standard structure recommended by the Laravel framewo
 - **tests/**: Contains test cases for the application.
 - **vendor/**: Contains dependencies installed via Composer.
 
-## Fronend Structure
+## Frontend Structure
 - **public/**: Contains the HTML template and other static assets for the application.
 - **src/**: Contains the main source code of the React application.
   - **assets/**: Contains style sheets and images (static content).
