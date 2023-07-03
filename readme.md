@@ -24,11 +24,17 @@ The News project follows a standard structure recommended by the Laravel framewo
 ## Fronend Structure
 - **public/**: Contains the HTML template and other static assets for the application.
 - **src/**: Contains the main source code of the React application.
-  - **components/**: Contains reusable UI components.
-  - **pages/**: Contains components representing different pages or routes of the application.
-  - **services/**: Contains modules for handling API requests or other external services.
-  - **styles/**: Contains CSS or SCSS files for styling the application.
-  - **utils/**: Contains utility functions or helper modules.
+  - **assets/**: Contains style sheets and images (static content).
+  - **app/**: Contains all the project app components.
+    - **api/**: Contains all the api call functions.
+    - **components/**: Contains reusable UI components.
+    - **constants/**: Contains all the constants used through out the app.
+    - **helpers/**: Contains modules for handling API requests or other external services.
+    - **layouts/**: Contains all the app layouts.
+    - **pages/**: Contains components representing different pages or routes of the application.
+    - **redux/**: Contains redux store related action and reducers.
+    - **routes/**: Contains all the app internal screen routes.
+    - **utils/**: Contains utility functions or helper modules.
   - **App.js**: The root component of the application.
   - **index.js**: The entry point of the application, responsible for rendering the App component and mounting it in the DOM.
 - **.gitignore**: Specifies files and directories to be ignored by Git.
@@ -41,8 +47,7 @@ The News project follows a standard structure recommended by the Laravel framewo
 - **db/**: Database dockerization related files.
 - **nginx/**: Nginx dockerization related files.
 
-
-## Getting Started
+# Getting Started
 
 ### Prerequisites
 
@@ -72,7 +77,6 @@ Make sure you have the following tools installed on your system:
   1. Go to frontend directory and Create `.env` file.
   2. Place following env variables there
 
-  ### Example .env File
 - REACT_APP_API_END_POINT="http://127.0.0.1:8000/api/v1"
 
 **Note**: Ensure that sensitive information, such as API tokens and passwords, are properly secured and not exposed in version control.
@@ -117,12 +121,10 @@ To get the swagger documentation of all the backend apis, Use this url
 </details>
 
 <details>
-  <summary><code>External Image</code></summary>
+  <summary><code>Image</code></summary>
 
-  Here is an image showcasing a feature or aspect of the project:
+  Here is an image showcasing a swagger ui of project:
 
-  ![Image Alt Text](https://drive.google.com/file/d/18G2Dh2aDNTDDN4rgpQpXdFM3cn7H-xuj/view?usp=sharing)
-
-  Replace the URL with the actual path to the image you want to display.
+  ![Project Image](https://drive.google.com/file/d/18G2Dh2aDNTDDN4rgpQpXdFM3cn7H-xuj/view?usp=sharing)
 
 </details>
