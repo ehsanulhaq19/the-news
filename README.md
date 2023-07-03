@@ -127,12 +127,14 @@ To get the swagger documentation of all the backend apis, Use this url
 
   ![Project Image](https://drive.google.com/file/d/18G2Dh2aDNTDDN4rgpQpXdFM3cn7H-xuj/view?usp=sharing)
 
+  Link: https://drive.google.com/file/d/18G2Dh2aDNTDDN4rgpQpXdFM3cn7H-xuj/view?usp=sharing
+
 </details>
 
 ## Article sources used
-- **NewsOrg/**
-- **TheGuardian/**
-- **NewYorkTimes/**
+- NewsOrg/
+- TheGuardian/
+- NewYorkTimes/
 
 ## Project cron command not
 <details>
